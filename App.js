@@ -35,14 +35,6 @@ const App = () => {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarShowLabel: false,
-          // tabBarIcon: ({ color, size }) => {
-
-          //   // You can return any component that you like here!
-          //   return <View>
-          //     <Image style={styles.icon} source={IMAGES.organizers} />
-
-          //   </View>
-          // },
           tabBarActiveTintColor: '#b22126',
           tabBarInactiveTintColor: 'gray',
         })}
@@ -50,24 +42,24 @@ const App = () => {
 
 
         <Tab.Screen
-          name='Home'
+          name='Favourites'
           component={HomeScreen}
           options={{
-            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.organizers} />)
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.coloredFavourite} />)
           }} />
 
         <Tab.Screen
-          name='Edit'
+          name='Upcoming'
           component={EditScreen}
           options={{
             tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.time} />)
           }} />
 
         <Tab.Screen
-          name='Profile'
+          name='Track Event'
           component={ProfileScreen}
           options={{
-            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.location} />)
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.location} />),
           }} />
 
         <Tab.Screen
@@ -96,7 +88,7 @@ const App = () => {
               </Pressable>
 
             ),
-            // tabBarIcon: () => < Image style={ styles.icon } source={ IMAGES.location}
+            tabBarIcon: () => < Image style={styles.icon} source={IMAGES.organizers} />
           })}
         />
 
@@ -110,8 +102,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   backicon: {
-    width: 24,
-    height: 24,
+    width: 20,
+    height: 20,
     marginLeft: 12
   },
   editicon: {
@@ -120,10 +112,10 @@ const styles = StyleSheet.create({
     marginRight: 12
   },
   icon: {
-    width: 25,
-    height: 25,
+    width: 20,
+    height: 20,
     resizeMode: "contain",
-    tintColor: "gray"
+
   }
 
 

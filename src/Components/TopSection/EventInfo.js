@@ -25,12 +25,13 @@ const styles = StyleSheet.create({
     date: {
         color: "#b22126",
         fontWeight: "500",
-        fontSize: 12,
+        fontSize: 14,
+        marginBottom: 5
 
 
     },
     header: {
-        fontWeight: "500",
+        fontWeight: "600",
         fontSize: 24,
         color: "black",
         lineHeight: 25,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     title: {
         color: "black",
         fontSize: 12,
-        fontWeight: "500",
+        fontWeight: "600",
         lineHeight: 25,
 
 

@@ -39,13 +39,15 @@ const styles = StyleSheet.create({
         resizeMode: "cover"
     },
     text: {
-        fontWeight: "400",
+        fontWeight: "500",
         color: "black",
-        fontSize: 16
+        fontSize: 16,
+
     },
     hint: {
         fontSize: 12,
-        textAlign: "center"
+        textAlign: "center",
+        color: '#7f7f7f'
     },
     icon: {
         width: 25,

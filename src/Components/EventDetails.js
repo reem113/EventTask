@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     header: {
         color: "black",
         fontSize: 20,
-        fontWeight: "400",
+        fontWeight: "600",
         marginBottom: 10,
 
     },

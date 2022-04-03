@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "black",
         fontSize: 14,
+        fontWeight: "bold"
 
 
     },
@@ -35,6 +36,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: '#b22126',
         fontSize: 20,
+        fontWeight: "bold"
 
 
     }
