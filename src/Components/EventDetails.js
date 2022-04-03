@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "400",
         marginBottom: 10,
-        fontFamily: 'sans-serif',
+
     },
     text: {
         color: "black",
-        fontFamily: 'sans-serif',
+
     }
 
 })

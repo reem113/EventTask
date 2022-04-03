@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "black",
         fontSize: 14,
-        fontFamily: 'sans-serif',
 
 
     },
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: '#b22126',
         fontSize: 20,
-        fontFamily: 'sans-serif',
+
 
     }
 

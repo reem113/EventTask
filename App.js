@@ -1,12 +1,13 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import { StyleSheet, Image, Pressable, ToastAndroid } from 'react-native';
+import { StyleSheet, Image, Pressable, View } from 'react-native';
 
 import EventScreen from './src/Screens/EventScreen';
 import HomeScreen from './src/Screens/HomeScreen';
 import EditScreen from './src/Screens/EditScreen';
 import ProfileScreen from './src/Screens/profileScreen';
+import OptionsScreen from './src/Screens/OptionsScreen';
 
 import IMAGES from './assets/images';
 
@@ -28,7 +29,7 @@ const MyTheme = {
 
 
 
-const App = (navigation) => {
+const App = () => {
   return (
     <NavigationContainer theme={MyTheme}>
       <Tab.Navigator
@@ -37,23 +38,43 @@ const App = (navigation) => {
           // tabBarIcon: ({ color, size }) => {
 
           //   // You can return any component that you like here!
-          //   return <FontAwesomeIcon icon="fa-solid fa-arrow-up-short-wide" />
+          //   return <View>
+          //     <Image style={styles.icon} source={IMAGES.organizers} />
+
+          //   </View>
           // },
           tabBarActiveTintColor: '#b22126',
           tabBarInactiveTintColor: 'gray',
         })}
       >
 
-        <Tab.Screen name='Home' component={HomeScreen} />
 
-        <Tab.Screen name='Edit' component={EditScreen} />
+        <Tab.Screen
+          name='Home'
+          component={HomeScreen}
+          options={{
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.organizers} />)
+          }} />
 
-        <Tab.Screen name='Profile' component={ProfileScreen} />
+        <Tab.Screen
+          name='Edit'
+          component={EditScreen}
+          options={{
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.time} />)
+          }} />
+
+        <Tab.Screen
+          name='Profile'
+          component={ProfileScreen}
+          options={{
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.location} />)
+          }} />
 
         <Tab.Screen
           name="Event"
           component={EventScreen}
-          options={{
+          options={({ navigation }) => ({
+
             title: "Events",
             headerTintColor: 'rgb(78, 78, 78)',
             headerTitleAlign: "center",
@@ -67,13 +88,16 @@ const App = (navigation) => {
             )
             ,
             headerRight: () => (
-              <Pressable onPress={() => console.log('hi')}>
+              <Pressable
+                onPress={() => navigation.navigate('OptionsScreen')}>
                 <Image
                   style={styles.editicon}
                   source={IMAGES.headerEdit} />
               </Pressable>
-            )
-          }}
+
+            ),
+            // tabBarIcon: () => < Image style={ styles.icon } source={ IMAGES.location}
+          })}
         />
 
 
@@ -94,6 +118,12 @@ const styles = StyleSheet.create({
     height: 10,
     width: 30,
     marginRight: 12
+  },
+  icon: {
+    width: 25,
+    height: 25,
+    resizeMode: "contain",
+    tintColor: "gray"
   }
 
 

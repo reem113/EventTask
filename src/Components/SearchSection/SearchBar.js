@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     },
     invite: {
         color: '#b22126',
-        fontFamily: 'sans-serif',
         textAlignVertical: "center",
         fontSize: 16
 

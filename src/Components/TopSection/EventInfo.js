@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         color: "#b22126",
         fontWeight: "500",
         fontSize: 12,
-        fontFamily: 'sans-serif',
+
 
     },
     header: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: "black",
         lineHeight: 25,
-        fontFamily: 'sans-serif',
+
 
     },
     title: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "500",
         lineHeight: 25,
-        fontFamily: 'sans-serif',
+
 
     }
 })
