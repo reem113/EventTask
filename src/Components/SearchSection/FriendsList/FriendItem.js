@@ -19,12 +19,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         marginVertical: 10,
-        marginHorizontal: '5%'
+        marginHorizontal: 10
     },
     img: {
-        width: 100,
-        height: 100,
-        borderRadius: 50
+        width: 70,
+        height: 70,
+        borderRadius: 35
     },
     text: {
         color: 'black'

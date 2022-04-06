@@ -19,17 +19,9 @@ const EventScreen = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-
-        axios({
-            method: 'get',
-            url: 'https://jsonplaceholder.typicode.com/posts',
-
-        })
-            .then(response => {
-
-                dispatch(getPosts(response?.data));
-            })
-    }, []);
+        console.log('nothing wrong');
+        dispatch(getPosts())
+    }, [dispatch]);
     return (
         <ScrollView style={styles.container}>
 

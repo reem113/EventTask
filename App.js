@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import { StyleSheet, Image, Pressable, View } from 'react-native';
+import { StyleSheet, Image, Pressable } from 'react-native';
 
 import EventScreen from './src/Screens/EventScreen';
 import HomeScreen from './src/Screens/HomeScreen';
@@ -18,20 +18,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
 
-const MyTheme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    text: 'rgb(78, 78, 78)'
-  },
-};
-
-
-
 
 const App = () => {
   return (
-    <NavigationContainer theme={MyTheme}>
+    <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarShowLabel: false,
@@ -40,27 +30,6 @@ const App = () => {
         })}
       >
 
-
-        <Tab.Screen
-          name='Favourites'
-          component={HomeScreen}
-          options={{
-            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.coloredFavourite} />)
-          }} />
-
-        <Tab.Screen
-          name='Upcoming'
-          component={EditScreen}
-          options={{
-            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.time} />)
-          }} />
-
-        <Tab.Screen
-          name='Track Event'
-          component={ProfileScreen}
-          options={{
-            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.location} />),
-          }} />
 
         <Tab.Screen
           name="Event"
@@ -91,6 +60,29 @@ const App = () => {
             tabBarIcon: () => < Image style={styles.icon} source={IMAGES.organizers} />
           })}
         />
+
+        <Tab.Screen
+          name='Favourites'
+          component={HomeScreen}
+          options={{
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.coloredFavourite} />)
+          }} />
+
+        <Tab.Screen
+          name='Upcoming'
+          component={EditScreen}
+          options={{
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.time} />)
+          }} />
+
+        <Tab.Screen
+          name='Track Event'
+          component={ProfileScreen}
+          options={{
+            tabBarIcon: () => (<Image style={styles.icon} source={IMAGES.location} />),
+          }} />
+
+
 
 
       </Tab.Navigator>

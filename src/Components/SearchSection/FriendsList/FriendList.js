@@ -8,16 +8,18 @@ import Frienditem from './FriendItem';
 
 const Friendlist = () => {
     const posts = useSelector(state => state.posts);
+    console.log(posts);
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                {posts.map((item) =>
-                    <View key={item.id}>
-                        <Frienditem title={item.id} />
-                    </View>)}
-            </View>
-        </ScrollView>
-
+        <View>
+            <ScrollView contentContainerStyle={{ flexGrow: 1 }} horizontal>
+                <View style={styles.container}>
+                    {posts.map((item) =>
+                        <View key={item.id}>
+                            <Frienditem title={item.id} />
+                        </View>)}
+                </View>
+            </ScrollView>
+        </View>
     );
 }
 
